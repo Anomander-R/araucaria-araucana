@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  // Font face
+  --ff-popins: "Poppins", sans-serif;
+
+  // Font weight
+  --fw-light: 200;
+  --fw-normal: 400;
+  --fw-bold: 600;
+
+  // Font Sizes
+
+  --fs-400: 0.9375rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.625rem;
+  --fs-900: 2.5rem;
+
+  // Primary colors
+
+  --col-red: hsl(0, 78%, 62%);
+  --col-cyan: hsl(180, 62%, 55%);
+  --col-orange: hsl(34, 97%, 64%);
+  --col-blue: hsl(212, 86%, 64%);
+
+  //Neutral colors
+  --col-very-dark-blue: hsl(234, 12%, 34%);
+  --col-grayish-blue: hsl(229, 6%, 66%);
+  --col-very-light-gray: hsl(0, 0%, 98%);
+
+  //Top of the card colors
+
+  //These colors are taken with color picker.
+  // --col-top-red: #a33536;
+  // --col-top-blue: #397dba;
+  // --col-top-green: #44b2b3;
+  // --col-top-orange: #e7a640;
+
+   //Given colors
+  --col-top-red: var(--col-red);
+  --col-top-blue: var(--col-blue);
+  --col-top-green: var(--col-cyan);
+  --col-top-orange: var(--col-orange);
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--ff-popins);
+  font-weight: var(--fw-normal);
+  line-height: 1.7;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9375rem;
+  color: var(--col-grayish-blue);
+  background-color: var(--col-very-light-gray);
+  padding-block-end: 5rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  color: var(--col-very-dark-blue);
+}
+
+.wrapper {
+  padding-inline: 2rem;
+  margin-inline: auto;
+  max-width: 80rem; // 1280px
+
+  &__narrow {
+    max-width: 34.375rem; // 550px
+  }
+  &__layout {
+    --gap: 2rem;
+    display: flex;
+    gap: var(--gap);
+
+    @media(width<56.25rem){ // 900px
+       flex-direction: column; 
+    }
+    .col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+      justify-content: center;
+
+      @media(width<56.25rem){ // 900px
+        max-width: 23.4375rem; // 375px
+        margin-inline: auto;
+     }
+    }
+  }
+}

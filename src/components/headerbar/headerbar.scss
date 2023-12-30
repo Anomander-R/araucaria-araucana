@@ -1,0 +1,21 @@
+.header{
+    text-align: center;
+    margin-block: 4rem;
+    &__text{
+        letter-spacing: -0.025rem;  
+        line-height: 1.5;
+        text-wrap: balance;
+    }
+    h1{
+         font-weight: var(--fw-light); 
+         letter-spacing: -0.025rem;  line-height: 1.3;
+         @media(width<26.875rem){ // 430px
+            font-size: var(--fs-600);
+         }
+    }
+    span{
+        font-weight: var(--fw-bold);  
+        letter-spacing: -0.025rem;   
+    }
+}
+
